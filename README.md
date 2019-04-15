@@ -67,6 +67,9 @@ exports.graphql = {
   // 开发工具 graphiQL 路由前的拦截器，建议用于做权限操作(如只提供开发者使用)
   onPreGraphiQL: function*(ctx) {},
 };
+
+// 添加中间件拦截请求
+exports.middleware = [ 'graphql' ];
 ```
 
 ## 使用方式
@@ -83,6 +86,9 @@ exports.graphql = {
 |   |   |   └── directive.js  // 自定义directive
 │   │   ├── project
 │   │   │   └── schema.graphql
+│   │   ├── schemaDirectives
+│   │   │   └── schemaDirective.js  // 自定义 SchemaDirective
+│   │   │ 
 │   │   └── user  // 一个graphql模型
 │   │       ├── connector.js  
 │   │       ├── resolver.js
