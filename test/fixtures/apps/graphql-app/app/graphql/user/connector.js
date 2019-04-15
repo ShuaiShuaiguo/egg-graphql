@@ -16,18 +16,19 @@ class UserConnector {
         name: `name${id}`,
         upperName: `name${id}`,
         password: `password${id}`,
+        lowerName: `NAME${id}`,
         createAt: 1528375304600,
         projects: [],
       }))
     );
   }
 
-  fetchByIds(ids) {
+  async fetchByIds(ids) {
     return this.loader.loadMany(ids);
   }
 
-  fetchById(id) {
-    return this.loader.load(id);
+  async fetchById(id) {
+    return await this.loader.load(id);
   }
 }
 

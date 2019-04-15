@@ -69,7 +69,7 @@ exports.graphql = {
 };
 
 // 添加中间件拦截请求
-exports.middleware = [ 'graphql' ];
+exports.middleware = ['graphql'];
 ```
 
 ## 使用方式
@@ -90,7 +90,7 @@ exports.middleware = [ 'graphql' ];
 │   │   │   └── schemaDirective.js  // 自定义 SchemaDirective
 │   │   │ 
 │   │   └── user  // 一个graphql模型
-│   │       ├── connector.js  
+│   │       ├── connector.js
 │   │       ├── resolver.js
 │   │       └── schema.graphql
 │   ├── model
@@ -102,6 +102,8 @@ exports.middleware = [ 'graphql' ];
 ## ts 的支持
 
 ## 增加了 schemaDireactives 的支持
+
+支持如上约定的目录结构，以及文件名作为指令名的方式.
 
 ## 参考文章
 
